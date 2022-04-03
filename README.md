@@ -43,4 +43,4 @@ One good way to demonstrate this theory mathematically would be to take many pat
 goal-functions) and align them so that their global minima sit atop each other. How quickly does the
 composite get smoother outside the global minima as layers are added? How smooth does the composite
 get when the layers are not summed, but instead the layer with the largest gradient at each point is
-chosen for the value of that point?
+chosen for the value of that point? Etc.

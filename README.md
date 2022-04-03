@@ -13,8 +13,9 @@ sharing one or more global minima with all other parts -- Same global minimum, d
 minima.
 
 Assuming the density of local minima for all of my chosen goal functions are roughly equivalent to,
-or cluster around some average value: p, then the density of local minima common to all components decreases exponentially
-like p^n, according to the number of harmonious goal functions in the composition.
+or cluster around some average value: p, then the density of local minima common to all components
+decreases exponentially like p^n, according to the number of harmonious goal functions in the
+composition.
 
 Note: multiplexing loss-landscapes is not as simple as summing them together. In fact, any linear
 combination of loss-landscapes will only multiply the density of local minima by n, which is
@@ -24,8 +25,9 @@ procedure, "paying more attention" to one as the other bottoms out, and to preve
 about this modulation action from reaching the optizer through the optimization variable (the final
 number that we are trying to minimize). The best way I've found to accomplish this so far is to
 calculate a linear combination of all CGFs weighted by the gradient magnitude of each CGF, and then
-subtracting the effect of this modulation (re-weighting) from the optimization variable at each step. This
-seems to perform rather well (beats state of the art in some cases) leaving much room for improvement.
+subtracting the effect of this modulation (re-weighting) from the optimization variable at each
+step. This seems to perform rather well (beats state of the art in some cases) leaving much room for
+improvement.
 
 This is something that I have yet to formalize mathematically but I have implimented the theory many
 ways, and brought it up to something that, while not nearly perfect, at least makes perfect sense.

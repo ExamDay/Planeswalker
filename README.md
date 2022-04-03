@@ -22,7 +22,7 @@ combination of loss-landscapes will only multiply the density of local minima by
 counter-productive. In order to take advantage of the harmony between CGFs (component goal
 functions), it is necessary to modulate between them dynamically throughout the optimization
 procedure, "paying more attention" to one as the other bottoms out, and to prevent any information
-about this modulation action from reaching the optizer through the optimization variable (the final
+about this modulation action from reaching the optimizer through the optimization variable (the final
 number that we are trying to minimize). The best way I've found to accomplish this so far is to
 calculate a linear combination of all CGFs weighted by the gradient magnitude of each CGF, and then
 subtracting the effect of this modulation (re-weighting) from the optimization variable at each

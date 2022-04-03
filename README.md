@@ -25,7 +25,7 @@ about this modulation action from reaching the optizer through the optimization 
 number that we are trying to minimize). The best way I've found to accomplish this so far is to
 calculate a linear combination of all CGFs weighted by the gradient magnitude of each CGF, and then
 subtracting the effect of this modulation (re-weighting) from the optimization variable at each step. This
-seems to perform rather well.
+seems to perform rather well (beats state of the art in some cases) leaving much room for improvement.
 
 This is something that I have yet to formalize mathematically but I have implimented the theory many
 ways, and brought it up to something that, while not nearly perfect, at least makes perfect sense.

@@ -51,7 +51,7 @@ thought of (though not necessarily encountered) so far:
 - Desert Wandering: this will happen when few or none of the CGFs exhibit an average global concavity
   toward their global minimum, and neither does their composition. This means that while the
 network is unlikely to get stuck in any local minimum it will also not improve generally over time.
-It will not converge on a solution, doomed to wandering config space forever.
+It will not converge on a solution, doomed to wander config space forever.
 - Obnoxious Teammate: It is possible that one function will fall into a local minimum that has
   especially steep walls by its reckoning. When the configuration reaches the bottom of this well
 the obnoxious member's voice will be modulated downward, or silenced altogether, allowing its team

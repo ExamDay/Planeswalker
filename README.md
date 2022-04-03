@@ -44,3 +44,23 @@ goal-functions) and align them so that their global minima sit atop each other. 
 composite get smoother outside the global minima as layers are added? How smooth does the composite
 get when the layers are not summed, but instead the layer with the largest gradient at each point is
 chosen for the value of that point? Etc.
+
+My current best "composition strategy" has a few failure modes in the case of finite n. Here's what I've
+thought of (though not necessarily encountered) so far:
+
+- Desert Wandering: this will happen when few or none of the CGFs exhibit an average global concavity
+  toward their global minimum, and neither does their composition. This means that while the
+network is unlikely to get stuck in any local minimum it will also not improve generally over time.
+It will not converge on a solution, doomed to wandering config space forever.
+- Obnoxious Teammate: It is possible that one function will fall into a local minimum that has
+  especially steep walls by its reckoning. When the configuration reaches the bottom of this well
+the obnoxious member's voice will be modulated downward, or silenced altogether, allowing its team
+mates to begin pulling him out of the hole. However, once the obnoxious one begins to climb out of
+the hole it will find itself on the afformentioned walls of great steepness, spiking its gradient
+and in turn accruing disproportionate control authority for itself. The obnoxious member
+can then pull the whole team back into the hole where the process repeats indefinitely.
+- Occillation: There may be regions in some symphonic landscapes where a model would able to enter
+  a "stable-state" of alternation between two or more local minima without ever reaching the global
+minimum.
+- (It seems to me like the probability-over-time of the above three failure modes drops as the number
+  of team members "n" grows, but that's just a feeling, especially for the occillation mode.)

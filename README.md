@@ -13,7 +13,7 @@ sharing one or more global minima with all other parts -- Same global minimum, d
 minima.
 
 Assuming the density of local minima for all of my chosen goal functions are roughly equivalent to,
-or cluster around some average value: p, then the density of local minima decreases exponentially
+or cluster around some average value: p, then the density of local minima common to all components decreases exponentially
 like p^n, according to the number of harmonious goal functions in the composition.
 
 Note: multiplexing loss-landscapes is not as simple as summing them together. In fact, any linear
